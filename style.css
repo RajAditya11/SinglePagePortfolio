@@ -13,7 +13,7 @@ html, body {
 
 #header {
     width: 100%;
-    height: 11%;
+    height: auto;
     margin-bottom: 1%;
     background-color: #fff;
     border-bottom: 1px solid #bcb2b2;
@@ -34,7 +34,7 @@ html, body {
 
 #main {
     width: 100%;
-    height: 88%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,3 +98,54 @@ html, body {
     text-align: center;
     margin-top: 10px;
 }
+
+
+/* ✅ Mobile: 0px to 767px - One card per row, smaller text and height */
+@media (min-width: 0px) and (max-width: 767px) {
+    #header-title {
+        font-size: 55px;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        width: 85%;
+        height: 300px; /* Important: this fixes the overlap */
+        margin-bottom: 20px;
+    }
+
+    .card-image-title {
+        padding: 10px;
+    }
+
+    .project-image {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .projectTitle {
+        font-size: 1rem;
+        margin-top: 8px;
+        text-align: center;
+    }
+}
+
+
+
+/* ✅ Tablet: 768px to 1200px - Two cards per row, moderate size */
+@media (min-width: 768px) and (max-width: 1200px) {
+    
+}
+
+
+ 
